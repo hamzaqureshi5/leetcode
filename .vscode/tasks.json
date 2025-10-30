@@ -1,0 +1,39 @@
+// {
+// 	"version": "2.0.0",
+// 	"tasks": [
+// 		{
+// 			"type": "cmake",
+// 			"label": "CMake: configure",
+// 			"command": "g++",
+// 			"problemMatcher": [],
+// 			"detail": "CMake template configure task",
+// 			"group": {
+// 				"kind": "build",
+// 				"isDefault": true
+// 			}
+// 		}
+// 	]
+// }
+        {
+            "version": "2.0.0",
+            "tasks": [
+				{
+					"label": "build",
+					"type": "shell",
+					"command": "g++",
+					"args": [
+						"-std=c++17",
+						"${file}",
+						"-o",
+						"${fileDirname}/${fileBasenameNoExtension}"
+					],
+					"group": {
+						"kind": "build",
+						"isDefault": true
+					},
+					"problemMatcher": [
+						"$gcc"
+					]
+				}
+			]
+        }
